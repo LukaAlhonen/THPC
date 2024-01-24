@@ -10,3 +10,7 @@ bin/
 build/
 .vscode/
 *.dSYM/
+
+# Archives
+*.zip
+*.tar.*
