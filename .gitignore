@@ -5,7 +5,8 @@
 !*.*
 !*/
 
-# Ignore .out files and build or bin directories
+# Ignore .out files and build, bin, .vscode or .dSYM dirs
 bin/
 build/
 .vscode/
+*.dSYM/

@@ -9,10 +9,10 @@ main()
     clock_t start, end;
     double cpu_time1, cpu_time2, cpu_time3;
 
-    int n = 200000000;
+    int n = 100000000;
     float res1 = 0.0; // 32 bit
     double res2 = 0.0; // 64 bit
-    __float128 res3 = 0.0; // 128 bit
+    long double res3 = 0.0; // 128 bit
 
     // Sum with 32 bit float
     start = clock();
