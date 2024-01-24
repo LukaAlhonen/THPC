@@ -2,13 +2,17 @@ Flat profile:
 
 Each sample counts as 0.01 seconds.
   %   cumulative   self              self     total           
- time   seconds   seconds    calls  ms/call  ms/call  name    
- 35.59      1.58     1.58                             __cos_fma
- 23.87      2.64     1.06                             __sin_fma
- 20.05      3.53     0.89                             __ieee754_exp_fma
- 12.61      4.09     0.56        1   560.00   560.00  main
-  6.08      4.36     0.27                             expf64
-  1.80      4.44     0.08                             _init
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+ 36.18      1.61     1.61                             __cos_fma
+ 25.17      2.73     1.12                             __sin_fma
+ 19.10      3.58     0.85                             __ieee754_exp_fma
+  6.74      3.88     0.30                             expf64
+  6.07      4.15     0.27                             main (simpleprofiling.c:21 @ 40188d)
+  4.72      4.36     0.21                             main (simpleprofiling.c:17 @ 401834)
+  1.12      4.41     0.05                             main (simpleprofiling.c:16 @ 401861)
+  0.67      4.44     0.03                             _init
+  0.22      4.45     0.01                             main (simpleprofiling.c:20 @ 4018e7)
+  0.00      4.45     0.00        1     0.00     0.00  main (simpleprofiling.c:8 @ 4017f5)
 
  %         the percentage of the total running time of the
 time       program used by this function.
@@ -46,30 +50,26 @@ notice and this notice are preserved.
 		     Call graph (explanation follows)
 
 
-granularity: each sample hit covers 4 byte(s) for 0.23% of 4.44 seconds
+granularity: each sample hit covers 4 byte(s) for 0.22% of 4.45 seconds
 
 index % time    self  children    called     name
                                                  <spontaneous>
-[1]     35.6    1.58    0.00                 __cos_fma [1]
+[1]     36.2    1.61    0.00                 __cos_fma [1]
 -----------------------------------------------
                                                  <spontaneous>
-[2]     23.9    1.06    0.00                 __sin_fma [2]
+[2]     25.2    1.12    0.00                 __sin_fma [2]
 -----------------------------------------------
                                                  <spontaneous>
-[3]     20.0    0.89    0.00                 __ieee754_exp_fma [3]
------------------------------------------------
-                0.56    0.00       1/1           __libc_start_call_main [5]
-[4]     12.6    0.56    0.00       1         main [4]
+[3]     19.1    0.85    0.00                 __ieee754_exp_fma [3]
 -----------------------------------------------
                                                  <spontaneous>
-[5]     12.6    0.00    0.56                 __libc_start_call_main [5]
-                0.56    0.00       1/1           main [4]
+[4]      6.7    0.30    0.00                 expf64 [4]
 -----------------------------------------------
                                                  <spontaneous>
-[6]      6.1    0.27    0.00                 expf64 [6]
+[8]      0.7    0.03    0.00                 _init [8]
 -----------------------------------------------
-                                                 <spontaneous>
-[7]      1.8    0.08    0.00                 _init [7]
+                0.00    0.00       1/1           __libc_start_call_main [580]
+[10]     0.0    0.00    0.00       1         main (simpleprofiling.c:8 @ 4017f5) [10]
 -----------------------------------------------
 
  This table describes the call tree of the program, and was sorted by
@@ -162,5 +162,7 @@ notice and this notice are preserved.
 
 Index by function name
 
-   [1] __cos_fma               [2] __sin_fma               [6] expf64
-   [3] __ieee754_exp_fma       [7] _init                   [4] main
+   [1] __cos_fma               [4] expf64                  [5] main (simpleprofiling.c:21 @ 40188d)
+   [3] __ieee754_exp_fma      [10] main (simpleprofiling.c:8 @ 4017f5) [9] main (simpleprofiling.c:20 @ 4018e7)
+   [2] __sin_fma               [6] main (simpleprofiling.c:17 @ 401834)
+   [8] _init                   [7] main (simpleprofiling.c:16 @ 401861)
