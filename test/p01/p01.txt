@@ -1,5 +1,0 @@
-p01
-
-model name      : Intel(R) Core(TM) i5-7400 CPU @ 3.00GHz
-cpu MHz         : 3328.299
-cpu cores       : 4

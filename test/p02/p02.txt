@@ -1,4 +1,0 @@
-p02
-
-Average: 3130.193955 MHz
-Standard Deviation: 831.4769364900178 MHz
