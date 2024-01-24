@@ -1,0 +1,12 @@
+p04
+
+The file gprof_out.txt contains the output of gprof.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name 
+  6.07      4.15     0.27                             main (simpleprofiling.c:21 @ 40188d)
+  4.72      4.36     0.21                             main (simpleprofiling.c:17 @ 401834)
+
+Lines 21 and 17 are the two innermost loops we are interested in.
+From the output we can see that 0.21 seconds was spent on the first loop (sum1=sum1+dx*i*j;)
+and 0.27 seconds was spent on the second loop (sum2=sum2+cos(exp(sin(dx*i*j)));).
+Since the second loop performs more complex calculations, it's natural for it to take up a bit more time.

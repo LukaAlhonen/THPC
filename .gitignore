@@ -16,5 +16,5 @@ build/
 *.tar.*
 
 # Misc
-.out
-.o
+*.out
+*.o
