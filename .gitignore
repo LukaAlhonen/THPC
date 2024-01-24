@@ -14,3 +14,7 @@ build/
 # Archives
 *.zip
 *.tar.*
+
+# Misc
+.out
+.o
