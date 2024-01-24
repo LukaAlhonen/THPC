@@ -1,0 +1,8 @@
+Since target1 depends on target2, which depends on target3, which depends on target1, 
+a circular dependency occurs. This is demonstrated in the makefile.
+
+Since all files depend on files that do not exist yet make throws the following error:
+make: Circular target3 <- target1 dependency dropped.
+cp target1 target3
+cp: target1: No such file or directory
+make: *** [target3] Error 1

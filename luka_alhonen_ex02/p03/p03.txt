@@ -1,0 +1,14 @@
+p03
+
+I tested the program p03.c on an Intel i5-7400 quad core cpu with n = 100000000 
+
+Output from the program p03.c:
+res1: 67108864.000000
+cpu_time for 32 bit float: 1.444415
+res2: 127022572.830602
+cpu_time for 64 bit float: 2.435753
+res3: 127022572.800286
+cpu_time for 128 bit float: 22.848177
+
+Interestingly the difference in CPU time it to execute the task is not really significant between the 32 bit and 64 bit float.
+However, for the 128 bit float the CPU time is significantly greater.

@@ -1,0 +1,6 @@
+p01
+
+I ran the program "p01.c" on my m2 macbook air and linux desktop and got the following results:
+- On the mac the program always crashes at index 915
+- On my linux desktop the index at which the program crashes varies from around 1400 to 3300
+- This is most likely due to the different memory management and layout techniques is in linux and macos

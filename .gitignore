@@ -1,0 +1,11 @@
+# Ignore all
+*
+
+# Unignore files with extension and dirs
+!*.*
+!*/
+
+# Ignore .out files and build or bin directories
+bin/
+build/
+.vscode/

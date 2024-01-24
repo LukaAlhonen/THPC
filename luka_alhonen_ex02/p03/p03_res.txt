@@ -1,0 +1,6 @@
+res1: 67108864.000000
+cpu_time for 32 bit float: 1.444415
+res2: 127022572.830602
+cpu_time for 64 bit float: 2.435753
+res3: 127022572.800286
+cpu_time for 128 bit float: 22.848177

@@ -1,0 +1,9 @@
+p02
+
+Output of "print a"
+$1 = {0, 0, 0, 0, 0, 0, -134324976, 32767, 0, 0}
+
+Output of "print i"
+$2 = 1304
+
+Interestingly, when running the program with gdb on my linux desktop, the program always crashes at index 1304.
