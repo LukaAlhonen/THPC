@@ -1,9 +1,10 @@
 # Ignore all
 *
 
-# Unignore files with extension and dirs
+# Unignore files with extension and dirs + makefile
 !*.*
 !*/
+!Makefile
 
 # Ignore .out files and build, bin, .vscode or .dSYM dirs
 bin/

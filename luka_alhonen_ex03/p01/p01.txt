@@ -1,0 +1,30 @@
+p01
+
+Output of where command:
+#0  0x000000000040119e in ackermann (m=0, n=633) at p01.c:12
+#1  0x000000000040116a in ackermann (m=1, n=632) at p01.c:8
+#2  0x0000000000401159 in ackermann (m=1, n=633) at p01.c:8
+#3  0x0000000000401159 in ackermann (m=1, n=634) at p01.c:8
+#4  0x0000000000401159 in ackermann (m=1, n=635) at p01.c:8
+#5  0x0000000000401159 in ackermann (m=1, n=636) at p01.c:8
+#6  0x0000000000401159 in ackermann (m=1, n=637) at p01.c:8
+#7  0x0000000000401159 in ackermann (m=1, n=638) at p01.c:8
+#8  0x0000000000401159 in ackermann (m=1, n=639) at p01.c:8
+#9  0x0000000000401159 in ackermann (m=1, n=640) at p01.c:8
+#10 0x0000000000401159 in ackermann (m=1, n=641) at p01.c:8
+#11 0x0000000000401159 in ackermann (m=1, n=642) at p01.c:8
+#12 0x0000000000401159 in ackermann (m=1, n=643) at p01.c:8
+#13 0x0000000000401159 in ackermann (m=1, n=644) at p01.c:8
+#14 0x0000000000401159 in ackermann (m=1, n=645) at p01.c:8
+#15 0x0000000000401159 in ackermann (m=1, n=646) at p01.c:8
+#16 0x0000000000401159 in ackermann (m=1, n=647) at p01.c:8
+#17 0x0000000000401159 in ackermann (m=1, n=648) at p01.c:8
+#18 0x0000000000401159 in ackermann (m=1, n=649) at p01.c:8
+#19 0x0000000000401159 in ackermann (m=1, n=650) at p01.c:8
+#20 0x0000000000401159 in ackermann (m=1, n=651) at p01.c:8
+#21 0x0000000000401159 in ackermann (m=1, n=652) at p01.c:8
+#22 0x0000000000401159 in ackermann (m=1, n=653) at p01.c:8
+#23 0x0000000000401159 in ackermann (m=1, n=654) at p01.c:8
+
+At the top of the stack we can see the function ackermann being called with (m,n) = (0,633)
+The rest of the stack shows calls to the ackermann function with m = 1 and n = 632...654
