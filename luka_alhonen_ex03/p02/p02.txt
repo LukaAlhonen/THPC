@@ -1,0 +1,24 @@
+p02
+
+All tests were run on a system with an Intel Core i5-7400 with 4 cores and 8gb of memory
+
+a)
+The source code line that consumed the most CPU time was line 88 inside the GetForces function 
+in the file forces.c (8.10 seconds)
+
+Here is the output from gprof:
+%   cumulative   self              self     total           
+time   seconds   seconds    calls  Ts/call  Ts/call  name    
+11.96      8.10     8.10                             GetForces (forces.c:88 @ 404d07)
+
+And here is the line of code:
+/* Then get a=F/m in units of �/fs^2 */
+dVdr=(dVdr/(m*u))/aunit/r;
+
+b)
+Most of the CPU time was spent in the GetForces function in the forces.c file (39.82 seconds)
+
+Here is the output from gprof:
+%   cumulative   self              self     total
+time   seconds   seconds    calls   s/call   s/call  name
+58.78     39.82    39.82    30000     0.00     0.00  GetForces
