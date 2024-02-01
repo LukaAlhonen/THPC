@@ -1,0 +1,61 @@
+p03
+
+For this exercise I created a Makefile that compiles four different binaries, each with different 
+optimisation. To make the results a bit more generalised I ran all four binaries 10 times and 
+calcuated the median. 
+
+The improvement in performance can be clearly seen from -O0 to -O2, but -O3 does not seem to provide 
+any improvement at all.
+
+ex3p3.c with -O0:
+1   - 0.281454 s
+2   - 0.263230 s
+3   - 0.271628 s
+4   - 0.270428 s
+5   - 0.272048 s
+6   - 0.272912 s
+7   - 0.271806 s
+8   - 0.258936 s
+9   - 0.276442 s
+10  - 0.274365 s
+median: 0.27192700000000003 s
+
+ex3p3.c with -O1:
+1   - 0.174806 s
+2   - 0.175706 s
+3   - 0.163251 s
+4   - 0.163480 s
+5   - 0.163730 s
+6   - 0.158739 s
+7   - 0.171482 s
+8   - 0.158225 s
+9   - 0.165968 s
+10  - 0.160137 s
+median: 0.163605 s
+
+ex3p3.c with -O2:
+
+1   - 0.127582 s
+2   - 0.093817 s
+3   - 0.097413 s
+4   - 0.097097 s
+5   - 0.092650 s
+6   - 0.096329 s
+7   - 0.097291 s
+8   - 0.087599 s
+9   - 0.095525 s
+10  - 0.107535 s
+median: 0.096713 s
+
+ex3p3.c with -O3:
+1   - 0.119640 s
+2   - 0.095073 s
+3   - 0.100004 s
+4   - 0.091011 s
+5   - 0.094252 s
+6   - 0.099033 s
+7   - 0.098482 s
+8   - 0.089409 s
+9   - 0.098302 s
+10  - 0.096208 s
+median: 0.09725500000000001 s
