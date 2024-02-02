@@ -1,4 +1,27 @@
 p04
+CPU time is a measurement of the time the CPU has spent running the code, whereas Wall clock time 
+is the actual amount of time the program to to execute.
 
-3.298879 s
-2.252579 
+Measurements were taken on a M2 MacBook air with either of these two functions doing most of the work:
+void expensive_operation(int n)
+void expensive_operation_print(int n)
+
+n = 9900000
+With printf inside for loop:
+Time elapsed actual time: 29.701232 s
+Elapsed CPU time: 8.260767 s
+
+n = 9900000
+Without printf inside for loop:
+Time elapsed actual time: 0.095437 s
+Elapsed CPU time: 0.097351 s
+
+n = 999000000
+Without printf inside for loop:
+Time elapsed actual time: 8.143330 s
+Elapsed CPU time: 8.122441 s
+
+As one can see the function that has a printf statement inside the loop is significantly significantly more expensive. 
+Also since CPU time does not include the time spent waiting for IO operations the function, 
+the difference between wall clock time and cpu time is much greater for the function with the 
+printf statement than for the one without it.
