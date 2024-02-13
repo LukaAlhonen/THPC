@@ -15,9 +15,11 @@ int main(int argc, char* argv[])
 
     auto start = std::chrono::high_resolution_clock::now();
 
-    for (int i = 0; i < n - 2; i++) {
-        if (i < 500) a[i] = 4.0 * b[i] + b[i+1];
-        else a[i] = 4.0 * b[i+1] + b[i];
+    for (int i = 0; i < 500; i++) {
+        a[i] = 4.0 * b[i] + b[i+1];
+    }
+    for (int i = 500; i < n-2; i++) {
+        a[i] = 4.0 * b[i+1] + b[i];
     }
 
     auto finish = std::chrono::high_resolution_clock::now();
