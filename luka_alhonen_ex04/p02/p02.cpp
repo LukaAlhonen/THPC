@@ -53,10 +53,12 @@ int main(int argc, char** argv)
 {
     std::vector<std::vector<int>> a(N, std::vector<int>(N));
     std::vector<std::vector<int>> b(N, std::vector<int>(N));
+    init_matrices(a, b);
 
-    double duration;
-
-    if (strcmp(argv[1], "b") == 0) {
+    double duration = 0.0;
+    if (argc == 1) {
+        duration = matrix_mult(a, b);
+    } else if (strcmp(argv[1], "b") == 0) {
         std::vector<std::vector<int>> a_T(N, std::vector<int>(N));
         a_T = transpose(a);
         duration = matrix_mult(a_T, b);
@@ -64,8 +66,6 @@ int main(int argc, char** argv)
         std::vector<std::vector<int>> b_T(N, std::vector<int>(N));
         b_T = transpose(b);
         duration = matrix_mult(a, b_T);
-    } else {
-        duration = matrix_mult(a, b);
     }
 
     std::cout << duration << std::endl;
