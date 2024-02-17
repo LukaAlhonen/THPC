@@ -10,4 +10,4 @@ p02_O3: p02.cpp
 	$(CXX) $(CFLAGS) -O3 -o p02_O3 p02.cpp
 
 clean:
-	rm -rf p02_O0 p02_O3
+	rm -f p02_O0 p02_O3
